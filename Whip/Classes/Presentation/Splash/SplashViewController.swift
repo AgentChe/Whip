@@ -50,7 +50,7 @@ private extension SplashViewController {
     }
     
     func goNext() {
-        let nc = NavigationController(rootViewController: MainViewController.make())
+        let nc = NavigationController(rootViewController: WhipsViewController.make())
         nc.setNavigationBarHidden(true, animated: false)
         
         if SessionManager().hasActiveSubscriptions() {

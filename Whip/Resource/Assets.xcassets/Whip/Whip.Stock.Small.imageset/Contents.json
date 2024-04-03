@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Stock Whip.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

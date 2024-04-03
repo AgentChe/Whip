@@ -30,11 +30,24 @@
 "Paygate.Error.Text" = "An error occurred during execution. Try later.";
 "Paygate.Error.Button" = "OK";
 
-// MARK: Main
-"Main.Title" = "WHIP APP";
+// MARK: Whips
+"Whips.Title" = "WHIP APP";
+"Whips.Description" = "SHAKE THE PHONE TO MAKE THE SOUND";
 
 // MARK: Settings
 "Settings.Title" = "MENU";
 "Settings.TermsOfUse" = "Terms of Use";
 "Settings.PrivacyPolicy" = "Privacy Policy";
 "Settings.Support" = "Support";
+
+// MARK: Whip
+"Whip.Bull.Name" = "BULLWHIP";
+"Whip.Bull.Description" = "Long, crackling cattle herding whip with precise control, sonic boom sound.";
+"Whip.Horse.Name" = "HORSE WHIP";
+"Whip.Horse.Description" = "The horse whip guides riders in horse activities with a long lash and handle, ensuring effective communication.";
+"Whip.Lash.Name" = "LASH WHIP";
+"Whip.Lash.Description" = "By a swiftly moving motion whip lash creates a powerful cracking sound. ";
+"Whip.Snake.Name" = "SNAKE WHIP";
+"Whip.Snake.Description" = "The snake whip, slender and plaited, is a versatile whip with a flexible, snake-like lash.";
+"Whip.Stock.Name" = "STOCK WHIP";
+"Whip.Stock.Description" = "From Australian stockmen, the stock whip has a long handle and braided lash, traditionally for herding livestock.";

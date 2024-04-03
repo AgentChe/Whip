@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  Soccer
+
+  Created by Андрей Чернышев on 01.02.2023.
+  
+*/
+
+// MARK: General
+"Cancel" = "Cancel";
+"Continue" = "Continue";
+"Next" = "Next";
+
+// MARK: ImagePicker
+"ImagePicker.TakePhoto" = "Take a photo";
+"ImagePicker.CameraRoll" = "Camera roll";
+"ImagePicker.PhotoLibrary" = "Photo library";
+
+// MARK: Paygate
+"Paygate.FreePeriod" = "3 DAYS FREE";
+"Paygate.Price" = "THEN %@";
+"Paygate.Title" = "GET A LIFETIME PLAN\nTO ACCESS ALL WHIPS";
+"Paygate.BuyButton" = "START FREE TRIAL";
+"Paygate.CancelAnytime" = "SECURED BY THE APP STORE. CANCEL ANYTIME.";
+"Paygate.TermsOfUse" = "TERMS OF USE";
+"Paygate.&" = " &";
+"Paygate.PrivacyPolicy" = "PRIVACY POLICY";
+"Paygate.Restore" = "RESTORE PURCHASES";
+"Paygate.Error.Title" = "Error";
+"Paygate.Error.Text" = "An error occurred during execution. Try later.";
+"Paygate.Error.Button" = "OK";
+
+// MARK: Main
+"Main.Title" = "WHIP APP";
+
+// MARK: Settings
+"Settings.Title" = "MENU";
+"Settings.TermsOfUse" = "Terms of Use";
+"Settings.PrivacyPolicy" = "Privacy Policy";
+"Settings.Support" = "Support";

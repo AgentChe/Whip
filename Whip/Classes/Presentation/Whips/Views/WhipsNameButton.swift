@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class WhipsNameButton: UIView {
+final class WhipsNameButton: UIButton {
     lazy var label = makeLabel()
     lazy var infoView = makeInfoView()
     

@@ -88,17 +88,15 @@
 		DEF627112BBC9C17006D608D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF627102BBC9C17006D608D /* SettingsViewModel.swift */; };
 		DEF627132BBC9C1C006D608D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF627122BBC9C1C006D608D /* SettingsView.swift */; };
 		DEF627162BBD4104006D608D /* SettingsLinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF627152BBD4104006D608D /* SettingsLinkButton.swift */; };
-		DEF6271D2BBD480F006D608D /* bullwhip.wav in Resources */ = {isa = PBXBuildFile; fileRef = DEF627182BBD480F006D608D /* bullwhip.wav */; };
-		DEF6271E2BBD480F006D608D /* snakewhip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DEF627192BBD480F006D608D /* snakewhip.mp3 */; };
-		DEF6271F2BBD480F006D608D /* horsewhip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DEF6271A2BBD480F006D608D /* horsewhip.mp3 */; };
-		DEF627202BBD480F006D608D /* lashwhip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DEF6271B2BBD480F006D608D /* lashwhip.mp3 */; };
-		DEF627212BBD480F006D608D /* stockwhip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DEF6271C2BBD480F006D608D /* stockwhip.mp3 */; };
 		DEF627252BBD484E006D608D /* Whip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF627242BBD484E006D608D /* Whip.swift */; };
 		DEF627272BBD48F7006D608D /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF627262BBD48F7006D608D /* ContentManager.swift */; };
 		DEF6272A2BBD4CEB006D608D /* WhipsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF627292BBD4CEB006D608D /* WhipsCollectionView.swift */; };
 		DEF6272C2BBD4DF5006D608D /* WhipsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF6272B2BBD4DF5006D608D /* WhipsCollectionCell.swift */; };
 		DEF6272E2BBD4F30006D608D /* WhipsCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF6272D2BBD4F30006D608D /* WhipsCollectionElement.swift */; };
 		DEF627322BBD6032006D608D /* WhipsNameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF627312BBD6031006D608D /* WhipsNameButton.swift */; };
+		DEF627352BBD9643006D608D /* WhipSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF627342BBD9643006D608D /* WhipSoundPlayer.swift */; };
+		DEF627372BBD973F006D608D /* WhipMotionShake.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF627362BBD973F006D608D /* WhipMotionShake.swift */; };
+		DEF6273B2BBDA2EF006D608D /* WhipsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF6273A2BBDA2EF006D608D /* WhipsInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -187,17 +185,15 @@
 		DEF627102BBC9C17006D608D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		DEF627122BBC9C1C006D608D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DEF627152BBD4104006D608D /* SettingsLinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLinkButton.swift; sourceTree = "<group>"; };
-		DEF627182BBD480F006D608D /* bullwhip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bullwhip.wav; sourceTree = "<group>"; };
-		DEF627192BBD480F006D608D /* snakewhip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = snakewhip.mp3; sourceTree = "<group>"; };
-		DEF6271A2BBD480F006D608D /* horsewhip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = horsewhip.mp3; sourceTree = "<group>"; };
-		DEF6271B2BBD480F006D608D /* lashwhip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lashwhip.mp3; sourceTree = "<group>"; };
-		DEF6271C2BBD480F006D608D /* stockwhip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stockwhip.mp3; sourceTree = "<group>"; };
 		DEF627242BBD484E006D608D /* Whip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whip.swift; sourceTree = "<group>"; };
 		DEF627262BBD48F7006D608D /* ContentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
 		DEF627292BBD4CEB006D608D /* WhipsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipsCollectionView.swift; sourceTree = "<group>"; };
 		DEF6272B2BBD4DF5006D608D /* WhipsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipsCollectionCell.swift; sourceTree = "<group>"; };
 		DEF6272D2BBD4F30006D608D /* WhipsCollectionElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipsCollectionElement.swift; sourceTree = "<group>"; };
 		DEF627312BBD6031006D608D /* WhipsNameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipsNameButton.swift; sourceTree = "<group>"; };
+		DEF627342BBD9643006D608D /* WhipSoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipSoundPlayer.swift; sourceTree = "<group>"; };
+		DEF627362BBD973F006D608D /* WhipMotionShake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipMotionShake.swift; sourceTree = "<group>"; };
+		DEF6273A2BBDA2EF006D608D /* WhipsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipsInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,7 +255,6 @@
 		DEF626282BBC8896006D608D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				DEF627172BBD4803006D608D /* Sounds */,
 				DEF626F12BBC8940006D608D /* Fonts */,
 				DEF626EA2BBC8940006D608D /* Strings */,
 				DEF6261D2BBC888B006D608D /* Assets.xcassets */,
@@ -567,6 +562,7 @@
 		DEF627062BBC95AC006D608D /* Whips */ = {
 			isa = PBXGroup;
 			children = (
+				DEF627332BBD9633006D608D /* Utils */,
 				DEF627282BBD4CE0006D608D /* Views */,
 				DEF627072BBC95D5006D608D /* WhipsViewController.swift */,
 				DEF627092BBC95DA006D608D /* WhipsViewModel.swift */,
@@ -594,18 +590,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		DEF627172BBD4803006D608D /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				DEF627182BBD480F006D608D /* bullwhip.wav */,
-				DEF6271A2BBD480F006D608D /* horsewhip.mp3 */,
-				DEF6271B2BBD480F006D608D /* lashwhip.mp3 */,
-				DEF627192BBD480F006D608D /* snakewhip.mp3 */,
-				DEF6271C2BBD480F006D608D /* stockwhip.mp3 */,
-			);
-			path = Sounds;
-			sourceTree = "<group>";
-		};
 		DEF627222BBD4835006D608D /* Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -628,6 +612,7 @@
 			children = (
 				DEF627302BBD5FB1006D608D /* CollectionView */,
 				DEF627312BBD6031006D608D /* WhipsNameButton.swift */,
+				DEF6273A2BBDA2EF006D608D /* WhipsInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -640,6 +625,15 @@
 				DEF6272D2BBD4F30006D608D /* WhipsCollectionElement.swift */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		DEF627332BBD9633006D608D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DEF627342BBD9643006D608D /* WhipSoundPlayer.swift */,
+				DEF627362BBD973F006D608D /* WhipMotionShake.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -702,19 +696,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEF627202BBD480F006D608D /* lashwhip.mp3 in Resources */,
 				DEF626FF2BBC8A9D006D608D /* Inter-Black.ttf in Resources */,
 				DEF627002BBC8A9D006D608D /* Inter-Bold.ttf in Resources */,
-				DEF627212BBD480F006D608D /* stockwhip.mp3 in Resources */,
 				DEF627012BBC8A9D006D608D /* Inter-Medium.ttf in Resources */,
-				DEF6271D2BBD480F006D608D /* bullwhip.wav in Resources */,
 				DEF627022BBC8A9D006D608D /* Inter-Regular.ttf in Resources */,
-				DEF6271E2BBD480F006D608D /* snakewhip.mp3 in Resources */,
 				DEF627032BBC8A9D006D608D /* Inter-SemiBold.ttf in Resources */,
 				DEF6261E2BBC888B006D608D /* Assets.xcassets in Resources */,
 				DEF626F32BBC8940006D608D /* Localizable.strings in Resources */,
 				DEF626212BBC888B006D608D /* Base in Resources */,
-				DEF6271F2BBD480F006D608D /* horsewhip.mp3 in Resources */,
 				DEF626F22BBC8940006D608D /* GoogleService-Info.plist in Resources */,
 				DEF627052BBC8C1D006D608D /* Splash.Animate.json in Resources */,
 			);
@@ -789,12 +778,14 @@
 				DEF626E02BBC8935006D608D /* IAPErrorHelper.swift in Sources */,
 				DEF626E42BBC8935006D608D /* IAPManager.swift in Sources */,
 				DEF626B12BBC8935006D608D /* DefaultRequestWrapper.swift in Sources */,
+				DEF6273B2BBDA2EF006D608D /* WhipsInfoView.swift in Sources */,
 				DEF6270F2BBC9C11006D608D /* SettingsViewController.swift in Sources */,
 				DEF626AD2BBC8935006D608D /* UIDevice+Extension.swift in Sources */,
 				DEF626B82BBC8935006D608D /* NetworkError.swift in Sources */,
 				DEF626BF2BBC8935006D608D /* TextAttributes.swift in Sources */,
 				DEF626D62BBC8935006D608D /* PaygateProductButton.swift in Sources */,
 				DEF627132BBC9C1C006D608D /* SettingsView.swift in Sources */,
+				DEF627372BBD973F006D608D /* WhipMotionShake.swift in Sources */,
 				DEF626B52BBC8935006D608D /* PushNotificationsModel.swift in Sources */,
 				DEF626DD2BBC8935006D608D /* SplashViewController.swift in Sources */,
 				DEF6269F2BBC8935006D608D /* Toast.swift in Sources */,
@@ -824,6 +815,7 @@
 				DEF626A02BBC8935006D608D /* NavigationController.swift in Sources */,
 				DEF626D82BBC8935006D608D /* PaygateViewController.swift in Sources */,
 				DEF626E62BBC8935006D608D /* SessionManager.swift in Sources */,
+				DEF627352BBD9643006D608D /* WhipSoundPlayer.swift in Sources */,
 				DEF626A52BBC8935006D608D /* PaddingLabel.swift in Sources */,
 				DEF626DC2BBC8935006D608D /* SplashView.swift in Sources */,
 				DEF626D92BBC8935006D608D /* PaygateViewModel.swift in Sources */,

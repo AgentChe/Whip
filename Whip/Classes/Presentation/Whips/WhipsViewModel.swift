@@ -15,6 +15,9 @@ final class WhipsViewModel {
     
     enum Action {
         case selected(Whip)
+        case playSound(String)
+        case startAccelerometer
+        case info(Bool)
     }
     
     private lazy var contentManager = ContentManager()
@@ -25,6 +28,10 @@ extension WhipsViewModel {
     struct Input {
         let didTapSettings: Signal<Void>
         let didSelectElement: Signal<WhipsCollectionElement>
+        let didMotionShake: Signal<Void>
+        let didFinishSoundPlaying: Signal<Void>
+        let didTapShowInfo: Signal<Void>
+        let didTapCloseInfo: Signal<Void>
     }
     
     struct Output {
@@ -36,6 +43,10 @@ extension WhipsViewModel {
     func configure(input: Input) -> Output {
         let activeSubscription = makeActiveSubscription()
         let whips = makeWhips()
+        let selectedWhip = makeSelectedWhip(
+            didSelectElement: input.didSelectElement,
+            whips: whips
+        )
         
         return Output(
             route: makeRoute(
@@ -43,8 +54,11 @@ extension WhipsViewModel {
                 didSelectElement: input.didSelectElement
             ),
             action: makeAction(
-                didSelectElement: input.didSelectElement,
-                whips: whips
+                selectedWhip: selectedWhip,
+                didMotionShake: input.didMotionShake,
+                didFinishSoundPlaying: input.didFinishSoundPlaying,
+                didTapShowInfo: input.didTapShowInfo,
+                didTapCloseInfo: input.didTapCloseInfo
             ),
             elements: makeElements(
                 activeSubscription: activeSubscription,
@@ -75,21 +89,52 @@ private extension WhipsViewModel {
     }
     
     func makeAction(
-        didSelectElement: Signal<WhipsCollectionElement>,
-        whips: Driver<[Whip]>
+        selectedWhip: Driver<Whip>,
+        didMotionShake: Signal<Void>,
+        didFinishSoundPlaying: Signal<Void>,
+        didTapShowInfo: Signal<Void>,
+        didTapCloseInfo: Signal<Void>
     ) -> Driver<Action> {
-        let initial = whips
-            .compactMap { $0.first(where: { !$0.paid } ) }
+        let selected = selectedWhip
             .map { Action.selected($0) }
         
-        let select = didSelectElement
+        let sound = didMotionShake
+            .withLatestFrom(selectedWhip)
+            .map { Action.playSound($0.soundName) }
             .asDriver(onErrorDriveWith: .never())
-            .map { Action.selected($0.whip) }
+        
+        let startAccelerometer = didFinishSoundPlaying
+            .map { Action.startAccelerometer }
+            .startWith(Action.startAccelerometer)
+            .asDriver(onErrorDriveWith: .never())
+        
+        let infoHidden = Signal
+            .merge(
+                didTapShowInfo.map { Action.info(false) },
+                didTapCloseInfo.map { Action.info(true) }
+            )
+            .asDriver(onErrorDriveWith: .never())
         
         return Driver
             .merge(
-               initial, select
+                selected, sound, startAccelerometer, infoHidden
             )
+    }
+    
+    func makeSelectedWhip(
+        didSelectElement: Signal<WhipsCollectionElement>,
+        whips: Driver<[Whip]>
+    ) -> Driver<Whip> {
+        let initial = whips
+            .compactMap { $0.first(where: { !$0.paid } ) }
+        
+        let select = didSelectElement
+            .asDriver(onErrorDriveWith: .never())
+            .map { $0.whip }
+        
+        return Driver
+            .merge(initial, select)
+            .distinctUntilChanged()
     }
     
     func makeElements(

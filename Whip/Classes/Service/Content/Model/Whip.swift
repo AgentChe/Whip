@@ -5,7 +5,7 @@
 //  Created by Андрей Чернышев on 03.04.2024.
 //
 
-struct Whip {
+struct Whip: Hashable {
     let name: String
     let soundName: String
     let largeImageName: String

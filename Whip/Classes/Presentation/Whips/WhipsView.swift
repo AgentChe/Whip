@@ -14,6 +14,7 @@ final class WhipsView: UIView {
     lazy var nameButton = makeNameButton()
     lazy var descriptionLabel = makeDescriptionLabel()
     lazy var imageView = makeImageView()
+    lazy var infoView = makeInfoView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,6 +33,26 @@ extension WhipsView {
     func setup(whip: Whip) {
         nameButton.setup(name: whip.name)
         imageView.image = UIImage(named: whip.largeImageName)
+        infoView.setup(whip: whip)
+    }
+    
+    func info(hidden: Bool) {
+        nameButton.isHidden = !hidden
+        descriptionLabel.isHidden = !hidden
+        
+        if hidden {
+            UIView.animate(withDuration: 0.3, animations: { [weak self] in
+                self?.infoView.alpha = 0
+            }, completion: { [weak self] result in
+                self?.infoView.isHidden = true
+            })
+        } else {
+            infoView.isHidden = false
+            
+            UIView.animate(withDuration: 0.3, animations: { [weak self] in
+                self?.infoView.alpha = 0.95
+            })
+        }
     }
 }
 
@@ -79,6 +100,13 @@ private extension WhipsView {
             imageView.heightAnchor.constraint(equalToConstant: 290.scale),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             imageView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 14.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            infoView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
+            infoView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
+            infoView.topAnchor.constraint(equalTo: whipsCollectionView.bottomAnchor, constant: 5.scale),
+            infoView.heightAnchor.constraint(equalToConstant: 440.scale)
         ])
     }
 }
@@ -151,6 +179,15 @@ private extension WhipsView {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
         view.clipsToBounds = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeInfoView() -> WhipsInfoView {
+        let view = WhipsInfoView()
+        view.alpha = 0
+        view.isHidden = true
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 final class WhipsViewController: UIViewController {
     private lazy var mainView = WhipsView()
@@ -14,6 +15,9 @@ final class WhipsViewController: UIViewController {
     private lazy var viewModel = WhipsViewModel()
     
     private lazy var disposeBag = DisposeBag()
+    
+    private lazy var player = WhipSoundPlayer()
+    private lazy var motionShake = WhipMotionShake()
     
     override func loadView() {
         view = mainView
@@ -24,7 +28,11 @@ final class WhipsViewController: UIViewController {
         
         let output = viewModel.configure(input: WhipsViewModel.Input(
             didTapSettings: mainView.settingsButton.rx.tap.asSignal(),
-            didSelectElement: mainView.whipsCollectionView.didSelect
+            didSelectElement: mainView.whipsCollectionView.didSelect,
+            didMotionShake: motionShake.didMotionShake,
+            didFinishSoundPlaying: player.didFinishPlaying,
+            didTapShowInfo: mainView.nameButton.rx.tap.asSignal(),
+            didTapCloseInfo: mainView.infoView.closeButton.rx.tap.asSignal()
         ))
         
         output.route
@@ -73,6 +81,12 @@ private extension WhipsViewController {
         switch action {
         case .selected(let whip):
             mainView.setup(whip: whip)
+        case .playSound(let name):
+            player.play(soundName: name)
+        case .startAccelerometer:
+            motionShake.startAccelerometer()
+        case .info(let hidden):
+            mainView.info(hidden: hidden)
         }
     }
 }

@@ -9,10 +9,10 @@ import CoreMotion
 import RxSwift
 import RxCocoa
 
-// TODO: ускорить срабатывание
 final class WhipMotionShake {
     enum Constants {
-        static let accelerationChangeThreshold: Double = 0.2
+        static let accelerationChangeThreshold: Double = 0.8
+        static let minimumHitAcceleration: Double = 0.5
     }
     
     private let motionManager = CMMotionManager()
@@ -23,7 +23,7 @@ final class WhipMotionShake {
     private lazy var didMotionShakeTrigger = PublishRelay<Void>()
     
     init() {
-        motionManager.accelerometerUpdateInterval = 0.02
+        motionManager.accelerometerUpdateInterval = 0.01
     }
 }
 
@@ -36,16 +36,21 @@ extension WhipMotionShake {
             }
             
             if let lastAccel = self.lastAcceleration {
-                let yChange = data.acceleration.y - lastAccel.y
-                let totalChange = abs(data.acceleration.x - lastAccel.x) + abs(yChange) + abs(data.acceleration.z - lastAccel.z)
+                let changes = (x: data.acceleration.x - lastAccel.x, y: data.acceleration.y - lastAccel.y, z: data.acceleration.z - lastAccel.z)
+                let totalChange = abs(changes.x) + abs(changes.y) + abs(changes.z)
                 
-                if yChange > 0 && !self.isIncreasing {
-                    self.isIncreasing = true
-                }
-                
-                if yChange < 0 && self.isIncreasing && totalChange > Constants.accelerationChangeThreshold {
-                    self.stop()
-                    self.didMotionShakeTrigger.accept(Void())
+                if totalChange > Constants.accelerationChangeThreshold {
+                    if changes.y > Constants.minimumHitAcceleration && !self.isIncreasing {
+                        self.isIncreasing = true
+                    }
+                    
+                    if changes.y < 0 && self.isIncreasing {
+                        self.stop()
+                        
+                        self.didMotionShakeTrigger.accept(Void())
+                    }
+                } else if self.isIncreasing && totalChange < Constants.accelerationChangeThreshold / 2 {
+                    self.isIncreasing = false
                 }
             }
 

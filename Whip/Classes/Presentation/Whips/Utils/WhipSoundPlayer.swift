@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 final class WhipSoundPlayer: NSObject {
-    private var player: AVAudioPlayer?
+    private lazy var players = [AVAudioPlayer]()
     
     private lazy var didFinishPlayingTrigger = PublishRelay<Void>()
 }
@@ -19,26 +19,28 @@ final class WhipSoundPlayer: NSObject {
 // MARK: AVAudioPlayerDelegate
 extension WhipSoundPlayer: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        stop()
         didFinishPlayingTrigger.accept(Void())
+        
+        if let index = players.firstIndex(where: { $0 === player }) {
+            players.remove(at: index)
+        }
     }
 }
 
 // MARK: Public
 extension WhipSoundPlayer {
     func play(soundName: String) {
-        guard let assetData = NSDataAsset(name: soundName) else {
+        guard
+            let assetData = NSDataAsset(name: soundName),
+            let player = try? AVAudioPlayer(data: assetData.data, fileTypeHint: "wav")
+        else {
             return
         }
         
-        player = try? AVAudioPlayer(data: assetData.data, fileTypeHint: "wav")
-        player?.delegate = self
-        player?.play()
-    }
-    
-    func stop() {
-        player?.stop()
-        player = nil
+        players.append(player)
+        
+        player.delegate = self
+        player.play()
     }
     
     var didFinishPlaying: Signal<Void> {

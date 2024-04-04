@@ -172,10 +172,11 @@ private extension WhipsViewModel {
         
         let startAccelerometer = refresh
             .flatMapLatest {
-                didFinishSoundPlaying
+                didMotionShake
                     .asDriver(onErrorDriveWith: .never())
                     .withLatestFrom(isStopped)
                     .filter { !$0 }
+                    .debounce(RxTimeInterval.milliseconds(500))
                     .map { _ in Action.startAccelerometer }
                     .startWith(Action.startAccelerometer)
             }
@@ -204,6 +205,7 @@ private extension WhipsViewModel {
             .compactMap { $0.first(where: { !$0.paid } ) }
         
         let select = didSelectElement
+            .filter { !$0.needPayment }
             .asDriver(onErrorDriveWith: .never())
             .map { $0.whip }
         

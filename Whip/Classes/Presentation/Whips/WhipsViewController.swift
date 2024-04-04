@@ -18,6 +18,7 @@ final class WhipsViewController: UIViewController {
     
     private lazy var player = WhipSoundPlayer()
     private lazy var motionShake = WhipMotionShake()
+    private lazy var timer = WhipsTimer()
     
     override func loadView() {
         view = mainView
@@ -32,7 +33,10 @@ final class WhipsViewController: UIViewController {
             didMotionShake: motionShake.didMotionShake,
             didFinishSoundPlaying: player.didFinishPlaying,
             didTapShowInfo: mainView.nameButton.rx.tap.asSignal(),
-            didTapCloseInfo: mainView.infoView.closeButton.rx.tap.asSignal()
+            didTapCloseInfo: mainView.infoView.closeButton.rx.tap.asSignal(),
+            didTapRefresh: mainView.countView.refreshButton.rx.tap.asSignal(),
+            didTimeLimit: timer.didTimeLimit,
+            didSecondsLeft: timer.didSecondsLeft
         ))
         
         output.route
@@ -50,6 +54,24 @@ final class WhipsViewController: UIViewController {
         output.elements
             .drive(Binder(mainView.whipsCollectionView) { base, elements in
                 base.setup(elements: elements)
+            })
+            .disposed(by: disposeBag)
+        
+        output.count
+            .drive(Binder(mainView.countView) { base, count in
+                base.setup(count: count)
+            })
+            .disposed(by: disposeBag)
+        
+        output.isStopped
+            .drive(Binder(mainView.countView) { base, isStopped in
+                base.stopped(isStopped)
+            })
+            .disposed(by: disposeBag)
+        
+        output.secondsLeft
+            .drive(Binder(mainView.countView) { base, secondsLeft in
+                base.setup(secondsLeft: secondsLeft)
             })
             .disposed(by: disposeBag)
     }
@@ -87,6 +109,8 @@ private extension WhipsViewController {
             motionShake.startAccelerometer()
         case .info(let hidden):
             mainView.info(hidden: hidden)
+        case .resetTimer:
+            timer.reset()
         }
     }
 }

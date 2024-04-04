@@ -12,7 +12,7 @@ import RxCocoa
 // TODO: ускорить срабатывание
 final class WhipMotionShake {
     enum Constants {
-        static let accelerationChangeThreshold: Double = 9
+        static let accelerationChangeThreshold: Double = 0.2
     }
     
     private let motionManager = CMMotionManager()

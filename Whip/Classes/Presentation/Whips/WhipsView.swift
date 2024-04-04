@@ -14,6 +14,7 @@ final class WhipsView: UIView {
     lazy var nameButton = makeNameButton()
     lazy var descriptionLabel = makeDescriptionLabel()
     lazy var imageView = makeImageView()
+    lazy var countView = makeCountView()
     lazy var infoView = makeInfoView()
     
     override init(frame: CGRect) {
@@ -103,6 +104,13 @@ private extension WhipsView {
         ])
         
         NSLayoutConstraint.activate([
+            countView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            countView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            countView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -46.scale),
+            countView.heightAnchor.constraint(equalToConstant: 134.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
             infoView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
             infoView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
             infoView.topAnchor.constraint(equalTo: whipsCollectionView.bottomAnchor, constant: 5.scale),
@@ -179,6 +187,14 @@ private extension WhipsView {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
         view.clipsToBounds = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeCountView() -> WhipsCountView {
+        let view = WhipsCountView()
+        view.backgroundColor = UIColor.clear
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

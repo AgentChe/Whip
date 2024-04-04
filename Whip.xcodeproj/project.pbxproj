@@ -97,6 +97,9 @@
 		DEF627352BBD9643006D608D /* WhipSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF627342BBD9643006D608D /* WhipSoundPlayer.swift */; };
 		DEF627372BBD973F006D608D /* WhipMotionShake.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF627362BBD973F006D608D /* WhipMotionShake.swift */; };
 		DEF6273B2BBDA2EF006D608D /* WhipsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF6273A2BBDA2EF006D608D /* WhipsInfoView.swift */; };
+		DEF6273D2BBDC776006D608D /* WhipsRefreshButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF6273C2BBDC776006D608D /* WhipsRefreshButton.swift */; };
+		DEF6273F2BBDC900006D608D /* WhipsCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF6273E2BBDC900006D608D /* WhipsCountView.swift */; };
+		DEF627412BBEA988006D608D /* WhipsTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF627402BBEA988006D608D /* WhipsTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,6 +197,9 @@
 		DEF627342BBD9643006D608D /* WhipSoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipSoundPlayer.swift; sourceTree = "<group>"; };
 		DEF627362BBD973F006D608D /* WhipMotionShake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipMotionShake.swift; sourceTree = "<group>"; };
 		DEF6273A2BBDA2EF006D608D /* WhipsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipsInfoView.swift; sourceTree = "<group>"; };
+		DEF6273C2BBDC776006D608D /* WhipsRefreshButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipsRefreshButton.swift; sourceTree = "<group>"; };
+		DEF6273E2BBDC900006D608D /* WhipsCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipsCountView.swift; sourceTree = "<group>"; };
+		DEF627402BBEA988006D608D /* WhipsTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipsTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -613,6 +619,8 @@
 				DEF627302BBD5FB1006D608D /* CollectionView */,
 				DEF627312BBD6031006D608D /* WhipsNameButton.swift */,
 				DEF6273A2BBDA2EF006D608D /* WhipsInfoView.swift */,
+				DEF6273C2BBDC776006D608D /* WhipsRefreshButton.swift */,
+				DEF6273E2BBDC900006D608D /* WhipsCountView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -632,6 +640,7 @@
 			children = (
 				DEF627342BBD9643006D608D /* WhipSoundPlayer.swift */,
 				DEF627362BBD973F006D608D /* WhipMotionShake.swift */,
+				DEF627402BBEA988006D608D /* WhipsTimer.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -811,6 +820,7 @@
 				DEF626C52BBC8935006D608D /* SceneDelegate.swift in Sources */,
 				DEF626AE2BBC8935006D608D /* UIEdgeInsets+Extension.swift in Sources */,
 				DEF626B32BBC8935006D608D /* RestAPITransport.swift in Sources */,
+				DEF6273F2BBDC900006D608D /* WhipsCountView.swift in Sources */,
 				DEF627162BBD4104006D608D /* SettingsLinkButton.swift in Sources */,
 				DEF626A02BBC8935006D608D /* NavigationController.swift in Sources */,
 				DEF626D82BBC8935006D608D /* PaygateViewController.swift in Sources */,
@@ -828,9 +838,11 @@
 				DEF627272BBD48F7006D608D /* ContentManager.swift in Sources */,
 				DEF627082BBC95D5006D608D /* WhipsViewController.swift in Sources */,
 				DEF627112BBC9C17006D608D /* SettingsViewModel.swift in Sources */,
+				DEF627412BBEA988006D608D /* WhipsTimer.swift in Sources */,
 				DEF6272E2BBD4F30006D608D /* WhipsCollectionElement.swift in Sources */,
 				DEF6269E2BBC8935006D608D /* RxActivityIndicator.swift in Sources */,
 				DEF626C02BBC8935006D608D /* Weak.swift in Sources */,
+				DEF6273D2BBDC776006D608D /* WhipsRefreshButton.swift in Sources */,
 				DEF626BC2BBC8935006D608D /* ObservableRetrySingle.swift in Sources */,
 				DEF626A42BBC8935006D608D /* GradientView.swift in Sources */,
 				DEF626E52BBC8935006D608D /* PurchaseValidationObserver.swift in Sources */,

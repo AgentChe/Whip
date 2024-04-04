@@ -33,6 +33,9 @@
 // MARK: Whips
 "Whips.Title" = "WHIP APP";
 "Whips.Description" = "SHAKE THE PHONE TO MAKE THE SOUND";
+"Whips.Count.WhipePerMinute" = "WHIPS PER MINUTE";
+"Whips.Count.SecondsLeft" = "%i SECONDS LEFT";
+"Whips.Count.Refresh" = "REFRESH";
 
 // MARK: Settings
 "Settings.Title" = "MENU";

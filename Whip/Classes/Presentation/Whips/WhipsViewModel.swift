@@ -244,6 +244,5 @@ private extension WhipsViewModel {
             .map { SessionManager().hasActiveSubscriptions() }
             .startWith(SessionManager().hasActiveSubscriptions())
             .asDriver(onErrorJustReturn: false)
-            .map { _ in true } // TODO
     }
 }

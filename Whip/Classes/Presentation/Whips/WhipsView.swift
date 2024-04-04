@@ -83,17 +83,17 @@ private extension WhipsView {
             whipsCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             whipsCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             whipsCollectionView.heightAnchor.constraint(equalToConstant: 102.scale),
-            whipsCollectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 29.scale)
+            whipsCollectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 29.scale : 16.scale)
         ])
         
         NSLayoutConstraint.activate([
             nameButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            nameButton.topAnchor.constraint(equalTo: whipsCollectionView.bottomAnchor, constant: 50.scale)
+            nameButton.topAnchor.constraint(equalTo: whipsCollectionView.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 50.scale : 16.scale)
         ])
         
         NSLayoutConstraint.activate([
             descriptionLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            descriptionLabel.topAnchor.constraint(equalTo: nameButton.bottomAnchor, constant: 10.scale)
+            descriptionLabel.topAnchor.constraint(equalTo: nameButton.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 10.scale : 8.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -106,7 +106,7 @@ private extension WhipsView {
         NSLayoutConstraint.activate([
             countView.leadingAnchor.constraint(equalTo: leadingAnchor),
             countView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            countView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -46.scale),
+            countView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -46.scale : -30.scale),
             countView.heightAnchor.constraint(equalToConstant: 134.scale)
         ])
         

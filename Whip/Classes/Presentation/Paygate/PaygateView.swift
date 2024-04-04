@@ -80,15 +80,15 @@ private extension PaygateView {
         ])
         
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: 190.scale),
-            imageView.heightAnchor.constraint(equalToConstant: 204.scale),
+            imageView.widthAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 190.scale : 172.scale),
+            imageView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 204.scale : 185.scale),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 81.scale)
+            imageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: ScreenSize.isIphoneXFamily ? 81.scale : 60.scale)
         ])
         
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 60.scale)
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 60.scale : 40.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -107,7 +107,7 @@ private extension PaygateView {
         
         NSLayoutConstraint.activate([
             cancelAnytimeLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            cancelAnytimeLabel.topAnchor.constraint(equalTo: buyButton.bottomAnchor, constant: 70.scale)
+            cancelAnytimeLabel.topAnchor.constraint(equalTo: buyButton.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 70.scale : 40.scale)
         ])
         
         NSLayoutConstraint.activate([

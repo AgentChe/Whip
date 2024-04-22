@@ -73,7 +73,6 @@
 		DEF626E42BBC8935006D608D /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF626912BBC8935006D608D /* IAPManager.swift */; };
 		DEF626E52BBC8935006D608D /* PurchaseValidationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF626922BBC8935006D608D /* PurchaseValidationObserver.swift */; };
 		DEF626E62BBC8935006D608D /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF626942BBC8935006D608D /* SessionManager.swift */; };
-		DEF626F22BBC8940006D608D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEF626E72BBC8940006D608D /* GoogleService-Info.plist */; };
 		DEF626F32BBC8940006D608D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEF626E92BBC8940006D608D /* Localizable.strings */; };
 		DEF626FF2BBC8A9D006D608D /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEF626FE2BBC8A8F006D608D /* Inter-Black.ttf */; };
 		DEF627002BBC8A9D006D608D /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEF626FD2BBC8A8F006D608D /* Inter-Bold.ttf */; };
@@ -173,7 +172,6 @@
 		DEF626912BBC8935006D608D /* IAPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		DEF626922BBC8935006D608D /* PurchaseValidationObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseValidationObserver.swift; sourceTree = "<group>"; };
 		DEF626942BBC8935006D608D /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		DEF626E72BBC8940006D608D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DEF626E82BBC8940006D608D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DEF626FA2BBC8A8F006D608D /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		DEF626FB2BBC8A8F006D608D /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -266,7 +264,6 @@
 				DEF6261D2BBC888B006D608D /* Assets.xcassets */,
 				DEF6261F2BBC888B006D608D /* LaunchScreen.storyboard */,
 				DEF626222BBC888B006D608D /* Info.plist */,
-				DEF626E72BBC8940006D608D /* GoogleService-Info.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -713,7 +710,6 @@
 				DEF6261E2BBC888B006D608D /* Assets.xcassets in Resources */,
 				DEF626F32BBC8940006D608D /* Localizable.strings in Resources */,
 				DEF626212BBC888B006D608D /* Base in Resources */,
-				DEF626F22BBC8940006D608D /* GoogleService-Info.plist in Resources */,
 				DEF627052BBC8C1D006D608D /* Splash.Animate.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1017,7 +1013,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sample.wifiscan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whipapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Sample Wifi Scan Development";
@@ -1055,7 +1051,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sample.wifiscan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whipapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Sample Wifi Scan Development";

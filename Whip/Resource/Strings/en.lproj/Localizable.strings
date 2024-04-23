@@ -17,10 +17,10 @@
 "ImagePicker.PhotoLibrary" = "Photo library";
 
 // MARK: Paygate
-"Paygate.FreePeriod" = "3 DAYS FREE";
-"Paygate.Price" = "THEN %@";
+"Paygate.FreePeriod" = "EVERYTHING FOR";
+"Paygate.Price" = "%@";
 "Paygate.Title" = "GET A LIFETIME PLAN\nTO ACCESS ALL WHIPS";
-"Paygate.BuyButton" = "START FREE TRIAL";
+"Paygate.BuyButton" = "CONTINUE";
 "Paygate.CancelAnytime" = "SECURED BY THE APP STORE. CANCEL ANYTIME.";
 "Paygate.TermsOfUse" = "TERMS OF USE";
 "Paygate.&" = " &";

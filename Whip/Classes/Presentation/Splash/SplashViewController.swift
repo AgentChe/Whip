@@ -24,7 +24,7 @@ final class SplashViewController: UIViewController {
         super.viewDidLoad()
         
         sdkInitialize.observe { [weak self] in
-            self?.goNext()
+            self?.route()
         }
     }
     
@@ -49,7 +49,18 @@ private extension SplashViewController {
         mainView.animationView.play()
     }
     
+    func route() {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) { [weak self] in
+            self?.goNext()
+        }
+    }
+    
     func goNext() {
+        if !OnboardingViewController.wasViewed() {
+            UIApplication.shared.keyWindow?.rootViewController = OnboardingViewController.make()
+            return
+        }
+        
         let nc = NavigationController(rootViewController: WhipsViewController.make())
         nc.setNavigationBarHidden(true, animated: false)
         

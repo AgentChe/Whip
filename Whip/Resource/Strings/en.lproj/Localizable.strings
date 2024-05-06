@@ -16,6 +16,12 @@
 "ImagePicker.CameraRoll" = "Camera roll";
 "ImagePicker.PhotoLibrary" = "Photo library";
 
+// MARK: Onboarding
+"Onboarding.Skip" = "SKIP";
+"Onboarding.Welcome1" = "Enjoy realistic whip\nsounds";
+"Onboarding.Welcome2" = "keep track with built-in\nwhip counter";
+"Onboarding.Welcome3" = "Simply shake your phone\nto produce lifelike whip\nsounds";
+
 // MARK: Paygate
 "Paygate.FreePeriod" = "EVERYTHING FOR";
 "Paygate.Price" = "%@";

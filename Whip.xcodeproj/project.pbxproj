@@ -99,6 +99,12 @@
 		DEF6273D2BBDC776006D608D /* WhipsRefreshButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF6273C2BBDC776006D608D /* WhipsRefreshButton.swift */; };
 		DEF6273F2BBDC900006D608D /* WhipsCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF6273E2BBDC900006D608D /* WhipsCountView.swift */; };
 		DEF627412BBEA988006D608D /* WhipsTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF627402BBEA988006D608D /* WhipsTimer.swift */; };
+		DEFA92DC2BE91A5200F892BC /* OPageIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFA92D02BE91A5200F892BC /* OPageIndicatorView.swift */; };
+		DEFA92DD2BE91A5200F892BC /* OWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFA92D22BE91A5200F892BC /* OWelcomeView.swift */; };
+		DEFA92DE2BE91A5200F892BC /* OSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFA92D32BE91A5200F892BC /* OSlideView.swift */; };
+		DEFA92DF2BE91A5200F892BC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFA92D52BE91A5200F892BC /* OnboardingView.swift */; };
+		DEFA92E02BE91A5200F892BC /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFA92D62BE91A5200F892BC /* OnboardingViewController.swift */; };
+		DEFA92E12BE91A5200F892BC /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFA92D72BE91A5200F892BC /* OnboardingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -198,6 +204,12 @@
 		DEF6273C2BBDC776006D608D /* WhipsRefreshButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipsRefreshButton.swift; sourceTree = "<group>"; };
 		DEF6273E2BBDC900006D608D /* WhipsCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipsCountView.swift; sourceTree = "<group>"; };
 		DEF627402BBEA988006D608D /* WhipsTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhipsTimer.swift; sourceTree = "<group>"; };
+		DEFA92D02BE91A5200F892BC /* OPageIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPageIndicatorView.swift; sourceTree = "<group>"; };
+		DEFA92D22BE91A5200F892BC /* OWelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWelcomeView.swift; sourceTree = "<group>"; };
+		DEFA92D32BE91A5200F892BC /* OSlideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlideView.swift; sourceTree = "<group>"; };
+		DEFA92D52BE91A5200F892BC /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		DEFA92D62BE91A5200F892BC /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		DEFA92D72BE91A5200F892BC /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -468,6 +480,7 @@
 		DEF626892BBC8935006D608D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DEFA92D82BE91A5200F892BC /* Onboarding */,
 				DEF6270D2BBC9C05006D608D /* Settings */,
 				DEF627062BBC95AC006D608D /* Whips */,
 				DEF626802BBC8935006D608D /* Paygate */,
@@ -642,6 +655,35 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		DEFA92D12BE91A5200F892BC /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				DEFA92D02BE91A5200F892BC /* OPageIndicatorView.swift */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
+		DEFA92D42BE91A5200F892BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DEFA92D12BE91A5200F892BC /* Atoms */,
+				DEFA92D22BE91A5200F892BC /* OWelcomeView.swift */,
+				DEFA92D32BE91A5200F892BC /* OSlideView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DEFA92D82BE91A5200F892BC /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DEFA92D42BE91A5200F892BC /* Views */,
+				DEFA92D62BE91A5200F892BC /* OnboardingViewController.swift */,
+				DEFA92D72BE91A5200F892BC /* OnboardingViewModel.swift */,
+				DEFA92D52BE91A5200F892BC /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -776,11 +818,13 @@
 				DEF626D72BBC8935006D608D /* PaygateView.swift in Sources */,
 				DEF6272A2BBD4CEB006D608D /* WhipsCollectionView.swift in Sources */,
 				DEF626C12BBC8935006D608D /* XOREncryption.swift in Sources */,
+				DEFA92E02BE91A5200F892BC /* OnboardingViewController.swift in Sources */,
 				DEF626C32BBC8935006D608D /* Appearance.swift in Sources */,
 				DEF6269B2BBC8935006D608D /* FirebaseManager.swift in Sources */,
 				DEF626DB2BBC8935006D608D /* SplashReceiptValidationObserver.swift in Sources */,
 				DEF626AF2BBC8935006D608D /* UITapGestureRecognizer+Extension.swift in Sources */,
 				DEF626E02BBC8935006D608D /* IAPErrorHelper.swift in Sources */,
+				DEFA92E12BE91A5200F892BC /* OnboardingViewModel.swift in Sources */,
 				DEF626E42BBC8935006D608D /* IAPManager.swift in Sources */,
 				DEF626B12BBC8935006D608D /* DefaultRequestWrapper.swift in Sources */,
 				DEF6273B2BBDA2EF006D608D /* WhipsInfoView.swift in Sources */,
@@ -800,6 +844,7 @@
 				DEF626D52BBC8935006D608D /* PaygateInteractor.swift in Sources */,
 				DEF627252BBD484E006D608D /* Whip.swift in Sources */,
 				DEF6269D2BBC8935006D608D /* RequestReview.swift in Sources */,
+				DEFA92DD2BE91A5200F892BC /* OWelcomeView.swift in Sources */,
 				DEF626BD2BBC8935006D608D /* Scalable.swift in Sources */,
 				DEF6269A2BBC8935006D608D /* FacebookManager.swift in Sources */,
 				DEF626A12BBC8935006D608D /* NavigationControllerSettings.swift in Sources */,
@@ -812,6 +857,7 @@
 				DEF626BA2BBC8935006D608D /* Fonts.swift in Sources */,
 				DEF626A72BBC8935006D608D /* TapAreaButton.swift in Sources */,
 				DEF626D42BBC8935006D608D /* Currency.swift in Sources */,
+				DEFA92DE2BE91A5200F892BC /* OSlideView.swift in Sources */,
 				DEF6272C2BBD4DF5006D608D /* WhipsCollectionCell.swift in Sources */,
 				DEF626C52BBC8935006D608D /* SceneDelegate.swift in Sources */,
 				DEF626AE2BBC8935006D608D /* UIEdgeInsets+Extension.swift in Sources */,
@@ -825,8 +871,10 @@
 				DEF626A52BBC8935006D608D /* PaddingLabel.swift in Sources */,
 				DEF626DC2BBC8935006D608D /* SplashView.swift in Sources */,
 				DEF626D92BBC8935006D608D /* PaygateViewModel.swift in Sources */,
+				DEFA92DC2BE91A5200F892BC /* OPageIndicatorView.swift in Sources */,
 				DEF626C22BBC8935006D608D /* AppDelegate.swift in Sources */,
 				DEF626BB2BBC8935006D608D /* NumberLaunches.swift in Sources */,
+				DEFA92DF2BE91A5200F892BC /* OnboardingView.swift in Sources */,
 				DEF626A82BBC8935006D608D /* Collection+Extension.swift in Sources */,
 				DEF626E22BBC8935006D608D /* IAPProduct.swift in Sources */,
 				DEF626B92BBC8935006D608D /* SignError.swift in Sources */,
@@ -997,7 +1045,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4X5YS65338;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1012,7 +1060,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.whipapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1035,7 +1083,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4X5YS65338;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1050,7 +1098,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.whipapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

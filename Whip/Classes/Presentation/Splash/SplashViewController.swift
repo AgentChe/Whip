@@ -61,7 +61,7 @@ private extension SplashViewController {
             return
         }
         
-        let nc = NavigationController(rootViewController: WhipsViewController.make())
+        let nc = NavigationController(rootViewController: WhipsViewController.make(requestReview: false))
         nc.setNavigationBarHidden(true, animated: false)
         
         if SessionManager().hasActiveSubscriptions() {

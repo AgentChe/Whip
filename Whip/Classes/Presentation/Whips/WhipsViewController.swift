@@ -20,6 +20,18 @@ final class WhipsViewController: UIViewController {
     private lazy var motionShake = WhipMotionShake()
     private lazy var timer = WhipsTimer()
     
+    private let requestReview: Bool
+    
+    private init(requestReview: Bool) {
+        self.requestReview = requestReview
+
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func loadView() {
         view = mainView
     }
@@ -74,13 +86,17 @@ final class WhipsViewController: UIViewController {
                 base.setup(secondsLeft: secondsLeft)
             })
             .disposed(by: disposeBag)
+        
+        if requestReview {
+            RequestReview.request()
+        }
     }
 }
 
 // MARK: Public
 extension WhipsViewController {
-    static func make() -> WhipsViewController {
-        let vc = WhipsViewController()
+    static func make(requestReview: Bool) -> WhipsViewController {
+        let vc = WhipsViewController(requestReview: requestReview)
         vc.navigationItem.backButtonTitle = " "
         return vc
     }

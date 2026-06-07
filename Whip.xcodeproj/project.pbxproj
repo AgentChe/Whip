@@ -10,8 +10,6 @@
 		1E0C48B159B4BA654B8D4CBA /* Pods_Whip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11068848D21CD9BE65C5DEC5 /* Pods_Whip.framework */; };
 		DEF6261E2BBC888B006D608D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEF6261D2BBC888B006D608D /* Assets.xcassets */; };
 		DEF626212BBC888B006D608D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DEF626202BBC888B006D608D /* Base */; };
-		DEF626982BBC8935006D608D /* AmplitudeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF626292BBC8935006D608D /* AmplitudeManager.swift */; };
-		DEF626992BBC8935006D608D /* BranchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF6262A2BBC8935006D608D /* BranchManager.swift */; };
 		DEF6269A2BBC8935006D608D /* FacebookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF6262B2BBC8935006D608D /* FacebookManager.swift */; };
 		DEF6269B2BBC8935006D608D /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF6262C2BBC8935006D608D /* FirebaseManager.swift */; };
 		DEF6269C2BBC8935006D608D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF6262E2BBC8935006D608D /* ImagePicker.swift */; };
@@ -115,8 +113,6 @@
 		DEF6261D2BBC888B006D608D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEF626202BBC888B006D608D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEF626222BBC888B006D608D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DEF626292BBC8935006D608D /* AmplitudeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmplitudeManager.swift; sourceTree = "<group>"; };
-		DEF6262A2BBC8935006D608D /* BranchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchManager.swift; sourceTree = "<group>"; };
 		DEF6262B2BBC8935006D608D /* FacebookManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookManager.swift; sourceTree = "<group>"; };
 		DEF6262C2BBC8935006D608D /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		DEF6262E2BBC8935006D608D /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -283,8 +279,6 @@
 		DEF6262D2BBC8935006D608D /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				DEF626292BBC8935006D608D /* AmplitudeManager.swift */,
-				DEF6262A2BBC8935006D608D /* BranchManager.swift */,
 				DEF6262B2BBC8935006D608D /* FacebookManager.swift */,
 				DEF6262C2BBC8935006D608D /* FirebaseManager.swift */,
 			);
@@ -767,9 +761,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Whip/Pods-Whip-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Whip/Pods-Whip-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -890,9 +888,7 @@
 				DEF626BC2BBC8935006D608D /* ObservableRetrySingle.swift in Sources */,
 				DEF626A42BBC8935006D608D /* GradientView.swift in Sources */,
 				DEF626E52BBC8935006D608D /* PurchaseValidationObserver.swift in Sources */,
-				DEF626982BBC8935006D608D /* AmplitudeManager.swift in Sources */,
 				DEF626AB2BBC8935006D608D /* UIApplication+Extension.swift in Sources */,
-				DEF626992BBC8935006D608D /* BranchManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1045,7 +1041,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4X5YS65338;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1060,7 +1056,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.whipapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1083,7 +1079,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4X5YS65338;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1098,7 +1094,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.whipapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

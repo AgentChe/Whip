@@ -35,9 +35,6 @@ final class PaygateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AmplitudeManager.shared
-            .logEvent(name: "Paygate Screen")
-        
         let didBuy = mainView.buyButton.rx.tap
             .map { GlobalDefinitions.Paygate.lifetime }
             .asSignal(onErrorSignalWith: .never())

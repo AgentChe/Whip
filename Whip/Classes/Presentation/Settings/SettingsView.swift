@@ -97,7 +97,7 @@ private extension SettingsView {
         let view = SettingsLinkButton(
             title: "Settings.TermsOfUse".localized,
             separatorHidden: false,
-            url: GlobalDefinitions.termsOfUseUrl
+            url: GlobalDefinitions.termsOfServiceUrl
         )
         view.backgroundColor = UIColor.clear
         view.translatesAutoresizingMaskIntoConstraints = false
